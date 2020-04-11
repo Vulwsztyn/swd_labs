@@ -66,7 +66,7 @@ def show_eigen_info(A, vectors):
 
 
 if __name__ == "__main__":
-    vectors = vectors_uniform(k=8)
+    vectors = vectors_uniform(k=16)
 
     A = np.array([[2, 0],
                   [0, 2]])
