@@ -113,7 +113,7 @@ def plot_pca_result_2d(X, Y1, Y2):
     plt.show()
 
 
-def test_common(X, n_comp=1):
+def run_pca_comparison(X, n_comp=1):
     Y1 = pca_manual(X, n_comp=n_comp)
     Y2 = pca_sklearn(X, n_comp=n_comp)
     print("\nDifference: {0}".format(abs((Y1 - Y2)).sum()))
@@ -140,7 +140,7 @@ def data_example1():
 
 if __name__ == "__main__":
     data = data_example1()
-    test_common(data, n_comp=2)
+    run_pca_comparison(data, n_comp=2)
 
     data = data_random(100, x_mean=0.0, x_std=1.0, y_mean=0.0, y_std=4.0, angle=-math.pi/4)
-    test_common(data, n_comp=2)
+    run_pca_comparison(data, n_comp=2)
